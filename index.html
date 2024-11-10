@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interactive Boxes</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>YAY! It’s BOGO</h1>
+            <div class="box popular" id="box1" onclick="toggleBox('box1')">
+
+                <div class="top-row">
+                    <p class="unit"><span><input type="checkbox" class="unit-checkbox"></span>1 Unit <span
+                            class="discount">10% Off</span></p>
+                    <p class="price">$10.00 USD</p>
+                </div>
+
+                <div class="price-area">
+                    <p class="standard-price">Standard Price</p>
+                    <span class="old-price">$24.00 USD</span>
+                </div>
+
+                <div class="box-content">
+                    <div class="header-row">
+                        <span></span> <!-- Empty space for alignment with numbering -->
+                        <label>Size</label>
+                        <label>Colour</label>
+                    </div>
+                    <div class="content" id="content1">
+                        <div class="main-option-row">
+                            <div class="option-row">
+                                <span>#1</span>
+                                <select onclick="event.stopPropagation()">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>
+                                <select onclick="event.stopPropagation()">
+                                    <option>Colour</option>
+                                    <option>Red</option>
+                                    <option>Blue</option>
+                                    <option>Green</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 2: 2 Unit (Most Popular) -->
+            <div class="box popular" id="box2" onclick="toggleBox('box2')">
+                <span class="badge">MOST POPULAR</span>
+                <div class="top-row">
+                    <p class="unit"><span><input type="checkbox" class="unit-checkbox" ></span>2 Unit <span class="discount">20% Off</span></p>
+                    <p class="price">$19.97 USD</p>
+
+                </div>
+                <div class="price-area">
+                    <p class="standard-price"></p>
+                    <span class="old-price">$24.00 USD</span>
+                </div>
+                <div class="box-content">
+                    <div class="header-row">
+                        <span></span> <!-- Empty space for alignment with numbering -->
+                        <label>Size</label>
+                        <label>Colour</label>
+                    </div>
+                    <div class="content" id="content2">
+                        <div class="main-option-row">
+                            <div class="option-row">
+                                <span>#1</span>
+                                <select onclick="event.stopPropagation()">
+                                  
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>
+                                <select onclick="event.stopPropagation()">
+                                    <option>Colour</option>
+                                    <option>Red</option>
+                                    <option>Blue</option>
+                                    <option>Green</option>
+                                </select>
+                            </div>
+                            
+                            <div class="option-row">
+                                <span>#2</span>
+                                <select onclick="event.stopPropagation()">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>
+                                <select onclick="event.stopPropagation()">
+                                    <option>Colour</option>
+                                    <option>Red</option>
+                                    <option>Blue</option>
+                                    <option>Green</option>
+                                </select>
+                                
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 3: 3 Unit -->
+            <div class="box popular" id="box3" onclick="toggleBox('box3')">
+                <div class="top-row">
+                    <p class="unit"><span><input type="checkbox" class="unit-checkbox"></span>3 Unit <span class="discount">30% Off</span></p>
+                    <p class="price">$19.97 USD</p>
+
+                </div>
+                <div class="price-area">
+                    <p class="standard-price"></p>
+                    <span class="old-price">$24.00 USD</span>
+                </div>
+                <div class="box-content">
+                    <div class="header-row">
+                        <span></span> <!-- Empty space for alignment with numbering -->
+                        <label>Size</label>
+                        <label>Colour</label>
+                    </div>
+                    <div class="content" id="content3">
+                        <div class="main-option-row">
+                            <div class="option-row">
+                                <span>#1</span>
+                                <select onclick="event.stopPropagation()">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>
+                                <select onclick="event.stopPropagation()">
+                                    <option>Colour</option>
+                                    <option>Red</option>
+                                    <option>Blue</option>
+                                    <option>Green</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="delivery">
+                <p>Free Delivery</p>
+                <span>Total:$18.00 USD </span>
+            </div>
+            <button class="add-to-cart"> +  Add to Cart</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>

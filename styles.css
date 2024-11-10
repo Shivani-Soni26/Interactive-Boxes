@@ -1,0 +1,218 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #FF6B82;
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 341px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.box.expanded {
+    background-color: #FFF9FA;
+    
+}
+
+.box.expanded.popular {
+    border-color: #FF6B82;
+}
+
+.badge {
+    position: absolute;
+    top: -8px; 
+    right: 0px;
+    transform: translateX(-5%); 
+    background-color:#FF6B82; 
+    color: #FFF9FA;
+    padding: 3px 6px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.box.expanded.popular::before {
+    content: ''; 
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    
+    border-top: 3px solid #FF6B82; 
+    z-index: 0; 
+}
+
+.unit{
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;  
+}
+.top-row,.delivery {
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+.top-row{
+    align-items: center;
+    gap: 10px;
+}
+.unit-checkbox {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #FF6B82 ;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+}
+.unit-checkbox:checked::before {
+    content: "";
+    position: absolute;
+    top:2px; 
+    left:2px;
+    width: 9px;
+    height: 9px;
+    background-color: #FF6B82; 
+    border-radius: 50%;
+    display: block;
+}
+.price-area{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+.discount {
+    color: #FFFFFF;
+    background-color:#FF6B82;
+    font-weight: 400;
+    margin-left: 10px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 400;
+    padding:2px 4px;
+}
+.price {
+    font-size: 14.5px;
+    color: #000000;
+    text-align: end; 
+    font-weight: 500;   
+}
+.standard-price {
+    margin-left: 24px;
+    font-size: 12px;
+    color: #000000;
+    font-weight: 400; 
+    justify-content: space-between;
+}
+
+.old-price {
+    font-weight: 400;
+    font-size: 10px;
+    color:#000000;
+    opacity: 32%;
+    text-decoration: line-through;
+}
+
+/* Add to Cart button */
+.add-to-cart {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #FF6B82;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+/* Box content styling */
+.box-content {
+    display: none;
+    padding-top: 10px;
+}
+
+.box.expanded .box-content {
+    display: block;
+}
+
+.content {
+    display: none;
+    margin-top: 7px;
+    display: flex;
+    gap: 10px;
+    margin-left: 30px;
+
+}
+.header-row {
+    display: flex;
+    font-weight: 400;
+    padding-left: 50px;
+}
+
+.header-row label {
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 20px;
+    margin-left: 2px;
+}
+.option-row {
+    display:flex ;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 15px;
+    width: 65px;
+}
+
+.option-row span {
+    font-size: 11px;
+    font-weight: 400;
+    text-align: left;;
+}
+
+.option-row select {
+    font-size: 11px;
+    font-weight: 400;
+    width: 100px; 
+}
+.delivery p{
+font-size: 14px;
+font-weight:500;
+color: #FF6B82;
+}
+.delivery span{
+    font-size: 14px;
+    font-weight:400;
+}
